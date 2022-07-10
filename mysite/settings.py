@@ -66,10 +66,10 @@ DATABASES = {
     'default': {
         'ENGINE': env.str('DB_ENGINE'),
         'NAME': env.str('DB_NAME'),
-        'USER':env.str('DB_USER'),
+        'USER': env.str('DB_USER'),
         'PASSWORD': env.str('DB_PASSWORD'),
-        'HOST':env.str('DB_HOST'),
-        'PORT':env.int('DB_PORT'),
+        'HOST': env.str('DB_HOST'),
+        'PORT': env.int('DB_PORT'),
     }
 }
 
@@ -90,7 +90,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -100,11 +99,9 @@ USE_I18N = True
 USE_TZ = True
 
 
-
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [
-    str(BASE_DIR.joinpath('static'))
-]
+STATIC_ROOT = str(BASE_DIR.joinpath('static'))
+STATICFILES_DIRS = []
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
