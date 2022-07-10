@@ -11,10 +11,11 @@ from .models import AddProject
 from .models import AddInformation
 from .models import AddInformation1
 
-
 from .bots.bot import telegram_bot_sendtext
 
+
 # ----------------------------  home func --------------------------------------------------
+
 
 def homeView(request):
     information = AddInformation.objects.all()
@@ -23,6 +24,7 @@ def homeView(request):
     return render(request, 'home/include_home.html', context)
 
 # ----------------------------  about func --------------------------------------------------
+
 
 def aboutView(request):
     items = Comments.objects.all()
@@ -48,6 +50,7 @@ def aboutView(request):
 
 # ----------------------------  comment func --------------------------------------------------
 
+
 def commentRemove(request, pk):
     comment = Comments.objects.get(id=pk)
     comment.delete()
@@ -56,12 +59,14 @@ def commentRemove(request, pk):
 
 # ----------------------------  project func --------------------------------------------------
 
+
 def projectView(request):
     projects = AddProject.objects.all()
     context = {'projects': projects}
     return render(request, 'myapp/project/include_project.html', context)
 
 # ----------------------------  contact func --------------------------------------------------
+
 
 def contactView(request):
     form = GetInfoForm()
