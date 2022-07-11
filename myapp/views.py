@@ -5,6 +5,7 @@ from django.shortcuts import redirect
 from .forms import CommentForm
 from .forms import GetInfoForm
 
+from .models import UdName
 from .models import Comments
 from .models import PhotoFor
 from .models import AddProject
@@ -75,7 +76,7 @@ def contactView(request):
         if form.is_valid():
             obj = form.save(commit=False)
             obj.save()
-            text = f"Xabar yuborgan shaxs: {obj.fullname}\n Email:{obj.email}\n Xabar matni: {obj.message}"
+            text = f"Xabar yuborgan shaxs => => {obj.fullname}\n Email => =>{obj.email}\n Xabar matni => => {obj.message}"
             resp = telegram_bot_sendtext(text)
             if resp:
                 messages.success(

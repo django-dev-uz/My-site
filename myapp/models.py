@@ -61,7 +61,15 @@ class AddProject(models.Model):
         ordering = ['published']
 
 
+class UdName(models.Model):
+    name = models.CharField(max_length=200, null=True, blank=False)
+
+    def __str__(self) -> str:
+        return str(self.name)
+
+
 class AddInformation(models.Model):
+    idname = models.ForeignKey(UdName, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=300, null=True, blank=False)
     body = models.TextField(null=True, blank=False)
 
@@ -70,6 +78,7 @@ class AddInformation(models.Model):
 
 
 class AddInformation1(models.Model):
+    idname = models.ForeignKey(UdName, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=300, null=True, blank=False)
     body = models.TextField(null=True, blank=False)
 
