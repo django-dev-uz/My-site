@@ -10,7 +10,7 @@
         <div id="accordion-1" class="accordion-wrapper">
           {% for infor in information %}
           <div class="card accordion-item">
-            <div class="card-header" id="{{infor.idname}}">
+            <div class="card-header" id="{{infor.id}}">
               <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-1-1" aria-expanded="false" aria-controls="accordion-collapse-1-1">{{infor.title}}</button>
             </div>
             <!-- /.card-header -->  
@@ -32,7 +32,7 @@
         <div id="accordion-2" class="accordion-wrapper">
           {% for infor1 in information1 %}
           <div class="card accordion-item">
-            <div class="card-header" id="{{infor1.idname}}">
+            <div class="card-header" id="{{infor1.id}}">
               <button class="collapsed" data-bs-toggle="collapse" data-bs-target="#accordion-collapse-2-1" aria-expanded="false" aria-controls="accordion-collapse-2-1">{{infor1.title}}</button>
             </div>
             <!-- /.card-header -->
