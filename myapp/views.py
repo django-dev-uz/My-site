@@ -18,7 +18,7 @@ from .bots.bot import telegram_bot_sendtext
 # ----------------------------  home func --------------------------------------------------
 
 
-def homeView(request):
+def homeView(request, pk):
     information = AddInformation.objects.all()
     information1 = AddInformation1.objects.all()
     context = {'information': information, 'information1': information1}
