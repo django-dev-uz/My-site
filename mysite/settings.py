@@ -69,19 +69,17 @@ if DEBUG:
         'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
-
 else:
     DATABASES = {
-    'default': {
-        'ENGINE': env.str('DB_ENGINE'),
-        'NAME': env.str('DB_NAME'),
-        'USER': env.str('DB_USER'),
-        'PASSWORD': env.str('DB_PASSWORD'),
-        'HOST': env.str('DB_HOST'),
-        'PORT': env.int('DB_PORT'),
+        'default': {
+            'ENGINE': env.str('DB_ENGINE'),
+            'NAME': env.str('DB_NAME'),
+            'USER': env.str('DB_USER'),
+            'PASSWORD': env.str('DB_PASSWORD'),
+            'HOST': env.str('DB_HOST'),
+            'PORT': env.int('DB_PORT'),
+        }
     }
-}
-
 
 AUTH_PASSWORD_VALIDATORS = [
     {

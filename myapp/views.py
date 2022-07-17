@@ -5,7 +5,6 @@ from django.shortcuts import redirect
 from .forms import CommentForm
 from .forms import GetInfoForm
 
-from .models import UdName
 from .models import Comments
 from .models import PhotoFor
 from .models import AddProject
@@ -18,7 +17,7 @@ from .bots.bot import telegram_bot_sendtext
 # ----------------------------  home func --------------------------------------------------
 
 
-def homeView(request, pk):
+def homeView(request):
     information = AddInformation.objects.all()
     information1 = AddInformation1.objects.all()
     context = {'information': information, 'information1': information1}
