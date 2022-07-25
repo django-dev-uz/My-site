@@ -2,7 +2,11 @@
 Sourcode and Resources for My Site <br>
 Live website - https://mysite-uz.herokuapp.com/ <hr><br>
 <img src="./docs/mysite.png">
-
+<hr>
+<img src="./docs/about.jpg">
+<hr>
+<img src="./docs/contact.jpg">
+<hr>
 
 # Installation
 * 1 - clone repo https://github.com/django-dev-uz/My-site.git
